@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+			/*background-color: #00f;*/
+			font-size: 0;	
+			box-sizing: border-box;
+			font-family: 微軟正黑體;
+			/*vertical-align: middle;*/
+		}
+		img{
+			width: 100%;	
+		}
+		div,li,h1,h2,h3,h4,h5,p,span{
+			font-size: 	initial;
+		}
+		header{
+			background-color: #0c0c2b;
+		}
+		.container{
+			max-width: 1280px;
+			width: 100%;
+			margin: auto;
+		}
+		.logo{
+			width: 10%;	
+			display: inline-block;
+			vertical-align: middle;
+			padding: 15px;	
+		}
+		.pcnav{
+			width: 	80%;
+			display: inline-block;	
+			background-color: #eee;
+			vertical-align: middle;
+			padding: 0px 10px;
+			border-radius: 5px;
+			/*text-align: center;*/
+			box-shadow: 0px 0px 20px rgba(0,0,0,0.2) inset;
+			margin: 10px;
+		}
+		.member{
+			width: 5%;
+			display: inline-block;	
+			vertical-align: middle;	
+		}
+		.nav_title{
+			cursor: pointer;
+			width: 149px;
+			/*transition: 0.5s;*/
+			text-align: center;
+			display: inline-block;
+			padding: 20px;
+			vertical-align: middle;
+		}
+		.nav_title h2{
+			color: #4d566e;
+		}
+		.nav_title h3{
+			font-size: 12px;
+			color: #bf6565;
+		}
+		.nav_list{
+			/*display: none;*/
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			width: 132px;
+			display: inline-block;
+			height: 100px;
+			background-color: #7583aa;
+			box-shadow: 0px 0px 20px rgba(0,0,0,0.1) inset;
+		}
+		.nav_item{
+			display: inline-block;
+			width: 16%;
+			/*text-align: right;*/
+			padding: 0 10px ;
+			transition:width 1s;
+			height: 100px;
+			vertical-align: middle;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.nav_discussion ul{
+			display: inline-block;
+		}
+		.nav_open{
+			width: 35%;
+		}
+		.nav_open .nav_list:after{
+			content: '';
+			border-right: 10px solid #7583aa;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			position: absolute;
+			width: 0;
+			height: 0;
+			left: -10px;
+			top: 40%;
+		}
+		.nav_list h4{
+			font-size: 13px;
+			line-height: 25px;
+			color: #fff;
+			white-space: nowrap;
+			cursor: pointer;
+			padding:0px 27px;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+		}
+		.nav_list h4:hover{
+			background-color: #4e5e8a;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo"><img src="https://goo.gl/AZjk5S"></div>
+			<nav class="pcnav">
+					<div class="nav_discussion nav_item nav_open">
+						<div class="nav_title">
+							<h2>表藝討論</h2>
+							<h3>discussion</h3>
+						</div>
+						<div class="nav_list">
+							<ul style="opacity: 1">
+								<li><h4>表藝人日常</h4></li>
+								<li><h4>表藝專刊</h4></li>
+								<li><h4>揪團看戲專區</h4></li>
+								<li><h4>戲後回饋專區</h4></li>
+							</ul>
+						</div>
+					</div>
+					<div class="nav_performance nav_item">
+						<div class="nav_title">
+							<h2>最新表演</h2>
+							<h3>performance</h3>
+						</div>
+						<div class="nav_list">
+							<ul style="transform: translateY(50%);">
+								<li><h4>表演列表</h4></li>
+								<li><h4>發布表演</h4></li>
+							</ul>
+						</div>
+					</div>
+					<div class="nav_place nav_item">
+						<div class="nav_title">
+							<h2>表藝場地</h2>
+							<h3>stage</h3>
+						</div>
+						<div class="nav_list">
+							<ul>
+								<li><h4>場地列表</h4></li>
+								<li><h4>發佈場地</h4></li>
+								<li><h4>場地需求列表</h4></li>
+								<li><h4>發佈場地需求</h4></li>
+							</ul>
+						</div>
+					</div>
+					<div class="nav_recruit nav_item">
+						<div class="nav_title">
+							<h2>表藝徵才</h2>
+							<h3>recruit</h3>
+						</div>
+						<div class="nav_list">
+							<ul style="transform: translateY(18%);">
+								<li><h4>徵才列表</h4></li>
+								<li><h4>劇團列表</h4></li>
+								<li><h4>表藝人列表</h4></li>
+							</ul>
+						</div>
+					</div>
+					<div class="nav_about nav_item">
+						<div class="nav_title">
+							<h2>關於我們</h2>
+							<h3>about us</h3>
+						</div>
+						<div class="nav_list">
+							<ul  style="transform: translateY(18%);">
+								<li><h4>聯絡資訊</h4></li>
+								<li><h4>常見問題</h4></li>
+								<li><h4>合作方案</h4></li>
+							</ul>
+						</div>
+					</div>
+			</nav>
+			<div class="member"><img src="https://goo.gl/od6FJ7"></div>				
+		</div>
+	</header>
+	<script type="text/javascript">
+		$('.nav_title').click(function(){
+			$(this).parent('.nav_item').addClass('nav_open');
+			$('.nav_title').not(this).parent('.nav_item').removeClass('nav_open');
+		});
+	</script>
+	
+</body>
+</html>
